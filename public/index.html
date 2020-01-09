@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon.ico"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Weather PWA" />
+    <meta name="description" content="A sample weather app" />
+    <meta name="theme-color" content="#2F3BA2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta charset="utf-8" />
+    <title>Random Name Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="client.js"></script>
+  </head>
+
+  <body>
+    <!--part 4-->
+    <button id="butInstall" aria-label="Install" hidden>Install</button>
+
+    <h1>Random Name Generator</h1>
+    <!-- page content -->
+    <div id="datacss" class="datacss">
+      <i class="fas">&#xf508;</i
+      ><span id="first" class="data">&nbsp; First and</span>
+      <span id="last" class="data"> last Name</span><br /><br />
+      <i class="fas">&#xf7bd;</i
+      ><span id="gender" class="data">&nbsp; Gender</span><br /><br />
+      <i class="fas">&#xf57d;</i
+      ><span id="region" class="data">&nbsp; Region</span><br />
+      <br />
+    </div>
+
+    <div id="intro" class="intro">
+      <p>
+        Welcome to the Random Name Generator! Start by pressing the random
+        "Generate" button or you can also customize the region and gender with
+        the options in the drop menu below.
+      </p>
+    </div>
+
+    <div class="button1">
+      <button class="button" onclick="generate()">Generate</button>
+    </div>
+    <div id="regions" class="dropmenu">
+      <select
+        aria-label="region"
+        id="regionlist"
+        onchange="console.log('foo ' + this.value)"
+        class="regiondrop"
+      >
+        <option value="random">Random Region</option>
+        <option value="albania">Albania</option>
+        <option value="argentina">Argentina</option>
+        <option value="armenia">Armenia</option>
+        <option value="australia">Australia</option>
+        <option value="austria">Austria</option>
+        <option value="belgium">Belgium</option>
+        <option value="brazil">Brazil</option>
+        <option value="bulgaria">Bulgaria</option>
+        <option value="canada">Canada</option>
+        <option value="colombia">Colombia</option>
+        <option value="england">England</option>
+        <option value="finland">Finland</option>
+        <option value="greece">Greece</option>
+        <option value="ireland">Ireland</option>
+        <option value="italy">Italy</option>
+        <option value="mexico">Mexico</option>
+        <option value="netherlands">Netherlands</option>
+        <option value="new zealand">New Zealand</option>
+        <option value="norway">Norway</option>
+        <option value="portugal">Portugal</option>
+        <option value="spain">Spain</option>
+        <option value="sweden">Sweden</option>
+        <option value="united states">United States</option>
+      </select>
+
+      <select aria-label="gender" id="genders" class="genderdrop">
+        <option value="random">Random Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+
+    <br />
+
+    <script src="addserviceworker.js"></script>
+    <script src="install.js"></script>
+  </body>
+</html>
